@@ -6,7 +6,7 @@ function NewestAlbumsList(props) {
   return (
     <div>
       {props.albumList.map((album, index) =>
-        <NewAlbum title={album.title} artist={album.artist} date={album.releaseDate}/>
+        <NewAlbum key={index} title={album.title} artist={album.artist} date={album.releaseDate} imageUrl={album.imageUrl} genre={album.genre}/>
       )}
     </div>
   )
