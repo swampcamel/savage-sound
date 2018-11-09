@@ -1,9 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import NewAlbum from './NewAlbum';
 
-function NewestAlbumsList() {
+function NewestAlbumsList(props) {
   return (
     <div>
-      List
+      {props.albumList.map((album, index) =>
+        <NewAlbum title={album.title} artist={album.artist} date={album.releaseDate}/>
+      )}
     </div>
   )
 }

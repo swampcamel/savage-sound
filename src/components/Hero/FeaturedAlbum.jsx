@@ -8,20 +8,28 @@ function FeaturedAlbum(props) {
         {`
           .feature-wrap {
             background: url(${props.imageUrl});
-            background-size: contain;
+            background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
-            width: 400px;
+            width: 600px;
             height: 100%;
             color: white;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
+            text-shadow: 2px 2px 2px #000;
+
+          }
+          .meta {
+            margin-bottom: 32px;
+            margin-left: 16px;
           }
         `}
       </style>
+      <div className="meta">
       <h2>{props.title}</h2>
       <span>{props.artist}</span>
+      </div>
     </div>
   )
 }

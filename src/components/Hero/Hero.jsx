@@ -15,8 +15,9 @@ function Hero() {
         totalSongs: "9",
         length: "39 min",
         rating: "7",
+        genre: "Psych Rock",
         starRating: "4",
-        imageUrl: "https://music-b26f.kxcdn.com/wp-content/uploads/2018/10/Uncle-Acid-The-Deadbeats-Wasteland-LP-COLOURED-73206-1-770x470.jpg",
+        imageUrl: "http://theobelisk.net/obelisk/wp-content/uploads/2018/08/uncle-acid-and-the-deadbeats-wasteland.jpg",
         trackList: [
           {
             songTitle: "Hold That Thought",
@@ -42,8 +43,9 @@ function Hero() {
         totalSongs: "8",
         length: "46 min",
         rating: "8",
+        genre: "Psych Rock",
         starRating: "4.5",
-        imageUrl: "https://music-b26f.kxcdn.com/wp-content/uploads/2018/10/Uncle-Acid-The-Deadbeats-Wasteland-LP-COLOURED-73206-1-770x470.jpg",
+        imageUrl: "http://theobelisk.net/obelisk/wp-content/uploads/2018/08/uncle-acid-and-the-deadbeats-wasteland.jpg",
         trackList: [
           {
             songTitle: "I See Through You",
@@ -67,16 +69,29 @@ function Hero() {
       <style jsx>
         {`
           .hero {
+            width: 100%;
+            border-bottom: solid red 1px;
+            padding-top: 42px;
+            padding-bottom: 42px;
+          }
+          .hero-feature {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 34vh;
-            border-bottom: solid red 1px;
+            border: 1px solid #e1e1e1;
+            border-radius: 50px;
+            height: 50vh;
+            padding: 42px;
           }
         `}
       </style>
+      <div className="hero-feature">
       <FeaturedAlbum title={state.albumList[1].title} imageUrl={state.albumList[1].imageUrl}  artist={state.albumList[1].artist}/>
-      <NewestAlbumsList/>
+      <NewestAlbumsList albumList={state.albumList}/>
+      </div>
       </div>
     )
   }
