@@ -22,7 +22,7 @@ module.exports = {
   },
 
   devtool: '#source-map',
-  
+
   devServer: {
     hot: true,
     contentBase: resolve(__dirname, 'build'),
@@ -45,7 +45,34 @@ module.exports = {
             "styled-jsx/babel"
           ]
         }
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          "babel-loader",
+          {
+            loader: "react-svg-loader",
+            options: {
+              svgo: {
+                plugins: [
+                  { removeTitle: false }
+                ],
+                floatPrecision: 2
+              }
+            }
+          }
+        ]
+      },
+      {
+      test: /\.(png|gif|jp(e*)g|svg)$/,
+      use: {
+        loader: 'url-loader',
+        options: {
+          limit: 8000,
+          name: 'images/[hash]-[name].[ext]'
+        }
       }
+    }
     ],
   },
 
@@ -55,7 +82,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template:'template.ejs',
       appMountId: 'react-app-root',
-      title: 'Savage Sound',
+      title: 'React Help Queue',
       filename: resolve(__dirname, "build", "index.html"),
     }),
   ]

@@ -1,9 +1,10 @@
 import React from "react";
+import Hero from "./Hero/Hero";
 
 function Home() {
   return (
     <div>
-    <p>Component built</p>
+    <Hero/>
     </div>
   )
 };
