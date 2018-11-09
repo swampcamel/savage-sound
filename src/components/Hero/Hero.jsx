@@ -17,7 +17,7 @@ function Hero() {
         rating: "7",
         genre: "Psych Rock",
         starRating: "4",
-        imageUrl: "http://theobelisk.net/obelisk/wp-content/uploads/2018/08/uncle-acid-and-the-deadbeats-wasteland.jpg",
+        imageUrl: "https://images-na.ssl-images-amazon.com/images/I/41MizCr3m2L._SY355_.jpg",
         trackList: [
           {
             songTitle: "Hold That Thought",
@@ -75,11 +75,11 @@ function Hero() {
             padding-bottom: 42px;
           }
           .hero-feature {
-            width: 1200px;
+            width: 1300px;
             margin-left: auto;
             margin-right: auto;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             border: 1px solid #e1e1e1;
             border-radius: 50px;

@@ -18,11 +18,20 @@ function FeaturedAlbum(props) {
             flex-direction: column;
             justify-content: flex-end;
             text-shadow: 2px 2px 2px #000;
-
+            border-radius: 36px;
+            transition: all 0.4s ease;
           }
+          .feature-wrap:hover {
+            border: 2px solid #A68524;
+          }
+          .feature-wrap:hover > .meta {
+            margin-left: 32px;
+          }
+
           .meta {
             margin-bottom: 32px;
             margin-left: 16px;
+            transition: all .8s ease;
           }
         `}
       </style>

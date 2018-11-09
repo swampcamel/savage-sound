@@ -19,7 +19,7 @@ function TopNav() {
       `}
       </style>
       <div>
-      <h2>LOGO</h2>
+      <h2>savage sound</h2>
       </div>
       <SearchBar/>
       <NavLinks/>
