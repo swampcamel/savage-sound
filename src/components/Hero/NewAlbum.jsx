@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import altPointer from '../../assets/img/alt-pointer.png';
 
 function NewAlbum(props) {
   return (
@@ -21,6 +22,7 @@ function NewAlbum(props) {
 
           .album-info {
             transition: all .15s linear;
+            cursor: url(${altPointer}), auto;
           }
           .new-album:hover {
             border: 2px solid #A68524;
