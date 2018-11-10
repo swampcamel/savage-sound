@@ -32,7 +32,54 @@ function Home() {
             rating: "8"
           }
         ]
-
+      },
+      {
+        title: "Amazing Things",
+        artist: "Things Amazing",
+        releaseDate: "Jul 13, 2018",
+        recordLabel: "Dine Alone Records",
+        formats: ["CD", "LP"],
+        totalSongs: "5",
+        length: "13 min",
+        rating: "8",
+        genre: "Math Rock",
+        starRating: "4.5",
+        imageUrl: "https://f4.bcbits.com/img/a2502688364_10.jpg",
+        trackList: [
+          {
+            songTitle: "Trash Boat",
+            trackNumber: "1",
+            length: "1:34",
+            rating: "6"
+          },
+        ]
+      },
+      {
+        title: "Magick Songs",
+        artist: "JEFF The Brotherhood",
+        releaseDate: "Aug 24, 2018",
+        recordLabel: "Dine Alone Records",
+        formats: ["CD", "LP"],
+        totalSongs: "12",
+        length: "54 min",
+        rating: "8",
+        genre: "Psych Rock",
+        starRating: "4.5",
+        imageUrl: "https://f4.bcbits.com/img/a4170847855_10.jpg",
+        trackList: [
+          {
+            songTitle: "Low Rider",
+            trackNumber: "1",
+            length: "3:30",
+            rating: "6"
+          },
+          {
+            songTitle: "I'm a Man",
+            trackNumber: "2",
+            length: "3:08",
+            rating: "8"
+          }
+        ]
       },
       {
         title: "Wasteland",
@@ -111,6 +158,33 @@ function Home() {
             songTitle: "Hug of Death",
             trackNumber: "2",
             length: "6:48",
+            rating: "8"
+          }
+        ]
+      },
+      {
+        title: "Fudge Sandwich",
+        artist: "Ty Segall",
+        releaseDate: "Oct 26, 2018",
+        recordLabel: "In the Red Records",
+        formats: ["CD", "LP"],
+        totalSongs: "11",
+        length: "38 min",
+        rating: "8",
+        genre: "Psych Rock",
+        starRating: "4.5",
+        imageUrl: "https://cdn.shopify.com/s/files/1/0336/8929/products/Ty_Segall_Fudge_Sandwich_-_Cover_for_web_1024x1024.jpg?v=1536102160",
+        trackList: [
+          {
+            songTitle: "Low Rider",
+            trackNumber: "1",
+            length: "3:30",
+            rating: "6"
+          },
+          {
+            songTitle: "I'm a Man",
+            trackNumber: "2",
+            length: "3:08",
             rating: "8"
           }
         ]

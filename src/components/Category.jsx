@@ -46,6 +46,7 @@ function Category(props) {
               </div>
               <p>{album.title}</p>
               <p>{album.artist}</p>
+              <p>{album.releaseDate}</p>
               </div>
             )
           }

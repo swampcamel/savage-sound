@@ -1,9 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function NavLinks() {
   return (
     <div>
-      Link
+      <Link to="/page2">
+        Link
+      </Link>
     </div>
   )
 }
