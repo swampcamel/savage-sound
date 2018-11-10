@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import altPointer from '../assets/img/alt-pointer.png';
+import {Link} from 'react-router-dom';
 
 function Category(props) {
   return (
@@ -15,10 +17,14 @@ function Category(props) {
             padding: 82px;
           }
           .album-img-wrapper {
-            border: 1px solid #e1e1e1;
-            height: 72px;
+            height: 142px;
             width: 200px;
             transition: transform .3s linear;
+            display: flex;
+            justify-content: center;
+          }
+          .album-img-wrapper img {
+            display: block;
           }
           .album-img-wrapper:hover {
             transform: scale(2);
@@ -29,7 +35,11 @@ function Category(props) {
             text-align: center;
           }
           .album-feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin: 0 22px;
+            cursor: url(${altPointer}), auto;
           }
         `}
       </style>
@@ -40,7 +50,8 @@ function Category(props) {
         {props.albumList.map((album, index) => {
           if (album.genre == props.name) {
             return(
-              <div className="album-feature" key={index}>
+              <Link key={index} to="/albums/:title">
+              <div className="album-feature" >
               <div className="album-img-wrapper">
                 <img height="100%" src={album.imageUrl}/>
               </div>
@@ -48,6 +59,7 @@ function Category(props) {
               <p>{album.artist}</p>
               <p>{album.releaseDate}</p>
               </div>
+              </Link>
             )
           }
         })}

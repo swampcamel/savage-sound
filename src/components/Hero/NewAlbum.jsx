@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import altPointer from '../../assets/img/alt-pointer.png';
+import {Link} from 'react-router-dom';
 
 function NewAlbum(props) {
   return (
@@ -18,11 +19,11 @@ function NewAlbum(props) {
             transition: all .15s linear;
             margin-left: auto;
             margin-right: auto;
+            cursor: url(${altPointer}), auto;
           }
 
           .album-info {
             transition: all .15s linear;
-            cursor: url(${altPointer}), auto;
           }
           .new-album:hover {
             border: 2px solid #A68524;
@@ -64,8 +65,10 @@ function NewAlbum(props) {
         `}
       </style>
       <div className="album-info">
-      <span className="album-title"><strong>{props.title}</strong></span>
-      <span className="album-artist">{props.artist}</span>
+        <Link to="/albums/:title">
+          <span className="album-title"><strong>{props.title}</strong></span>
+          <span className="album-artist">{props.artist}</span>
+        </Link>
       </div>
       <div className="new-album-right">
         <span className="genre"><em>{props.genre}</em></span>

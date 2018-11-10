@@ -11,7 +11,7 @@ function App(){
     <TopNav/>
     <Switch>
     <Route exact path='/' component={Home}/>
-    <Route path='/album/:title' component={AlbumReview}/>
+    <Route name="albums" path='/albums/:title' component={AlbumReview}/>
     <Route path='/page2' component={Page2}/>
     </Switch>
     </div>
