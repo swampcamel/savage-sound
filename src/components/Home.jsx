@@ -1,3 +1,4 @@
+
 import React from "react";
 import Hero from "./Hero/Hero";
 import Category from "./Category";
@@ -6,6 +7,33 @@ function Home() {
 
   const state2 = {
     albumList: [
+      {
+        title: "Memory Lame",
+        artist: "Giraffes? Giraffes!",
+        releaseDate: "Apr 27, 2018",
+        recordLabel: "Topshelf Records",
+        formats: ["CD", "LP"],
+        totalSongs: "6",
+        length: "41 min",
+        rating: "8",
+        genre: "Math Rock",
+        starRating: "4.5",
+        imageUrl: "https://f4.bcbits.com/img/a0605327415_16.jpg",
+        trackList: [
+          {
+            songTitle: "Heretical Doses",
+            trackNumber: "1",
+            length: "8:36",
+            rating: "6"
+          },
+          {
+            songTitle: "Hug of Death",
+            trackNumber: "2",
+            length: "6:48",
+            rating: "8"
+          }
+        ]
+      },
       {
         title: "Something Else",
         artist: "The Brian Jonestown Massacre",
@@ -55,6 +83,27 @@ function Home() {
         ]
       },
       {
+        title: "Our Latest Number",
+        artist: "toe",
+        releaseDate: "Aug 22, 2018",
+        recordLabel: "Topshelf Records",
+        formats: ["CD", "LP"],
+        totalSongs: "4",
+        length: "18 min",
+        rating: "8",
+        genre: "Math Rock",
+        starRating: "4.5",
+        imageUrl: "https://f4.bcbits.com/img/a1829945324_10.jpg",
+        trackList: [
+          {
+            songTitle: "Dual Harmonics",
+            trackNumber: "1",
+            length: "3:13",
+            rating: "6"
+          },
+        ]
+      },
+      {
         title: "Magick Songs",
         artist: "JEFF The Brotherhood",
         releaseDate: "Aug 24, 2018",
@@ -75,6 +124,33 @@ function Home() {
           },
           {
             songTitle: "I'm a Man",
+            trackNumber: "2",
+            length: "3:08",
+            rating: "8"
+          }
+        ]
+      },
+      {
+        title: "Mercury Fountain (Bonus Version)",
+        artist: "The Physics House Band",
+        releaseDate: "Sep 19, 2018",
+        recordLabel: "Small Pond",
+        formats: ["CD", "LP"],
+        totalSongs: "3",
+        length: "21 min",
+        rating: "9",
+        genre: "Math Rock",
+        starRating: "5",
+        imageUrl: "https://f4.bcbits.com/img/a3059624199_10.jpg",
+        trackList: [
+          {
+            songTitle: "Surrogate Head - Live",
+            trackNumber: "1",
+            length: "12:47",
+            rating: "10"
+          },
+          {
+            songTitle: "Obidant/Imploex - Live",
             trackNumber: "2",
             length: "3:08",
             rating: "8"
@@ -117,7 +193,7 @@ function Home() {
         totalSongs: "16",
         length: "47 min",
         rating: "7",
-        genre: "Black Metal",
+        genre: "Niche",
         starRating: "4.0",
         imageUrl: "https://f4.bcbits.com/img/a4038930226_16.jpg",
         trackList: [
@@ -136,28 +212,28 @@ function Home() {
         ]
       },
       {
-        title: "Memory Lame",
-        artist: "Giraffes? Giraffes!",
-        releaseDate: "Apr 27, 2018",
-        recordLabel: "Topshelf Records",
+        title: "You Won't Get What You Want",
+        artist: "Daughters",
+        releaseDate: "Oct 26, 2018",
+        recordLabel: "Ipecac Records",
         formats: ["CD", "LP"],
-        totalSongs: "6",
-        length: "41 min",
-        rating: "8",
-        genre: "Math Rock",
-        starRating: "4.5",
-        imageUrl: "https://f4.bcbits.com/img/a0605327415_16.jpg",
+        totalSongs: "10",
+        length: "48 min",
+        rating: "7",
+        genre: "Niche",
+        starRating: "4.0",
+        imageUrl: "https://f4.bcbits.com/img/a0781820650_10.jpg",
         trackList: [
           {
-            songTitle: "Heretical Doses",
+            songTitle: "City Song",
             trackNumber: "1",
-            length: "8:36",
+            length: "5:56",
             rating: "6"
           },
           {
-            songTitle: "Hug of Death",
+            songTitle: "Long Road, No Turns",
             trackNumber: "2",
-            length: "6:48",
+            length: "5:04",
             rating: "8"
           }
         ]
@@ -193,10 +269,10 @@ function Home() {
   }
   return (
     <div>
-    <Hero albumList={state2.albumList}/>
-    <Category name="Psych Rock" albumList={state2.albumList}/>
-    <Category name="Math Rock" albumList={state2.albumList}/>
-    <Category name="Black Metal" albumList={state2.albumList}/>
+      <Hero albumList={state2.albumList}/>
+      <Category name="Psych Rock" albumList={state2.albumList}/>
+      <Category name="Math Rock" albumList={state2.albumList}/>
+      <Category name="Niche" albumList={state2.albumList}/>
     </div>
   )
 };

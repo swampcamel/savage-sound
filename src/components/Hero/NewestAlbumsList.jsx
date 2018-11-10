@@ -20,7 +20,7 @@ function NewestAlbumsList(props) {
         `}
 
         </style>
-        {props.albumList.map((album, index) =>
+        {props.albumList.reverse().map((album, index) =>
           <NewAlbum key={index} title={album.title} artist={album.artist} date={album.releaseDate} imageUrl={album.imageUrl} genre={album.genre}/>
         )}
       </div>

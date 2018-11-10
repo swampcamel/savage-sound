@@ -41,7 +41,7 @@ function NewAlbum(props) {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            width: 30%;
+            width: 50%;
           }
           .album-img-wrapper {
             border: 1px solid #e1e1e1;
@@ -51,6 +51,15 @@ function NewAlbum(props) {
           .album-img-wrapper:hover {
             transform: scale(2);
           }
+          .album-date {
+            margin-left: 4px;
+            margin-right: 4px;
+            font-size: 14px;
+            font-weight: bold;
+          }
+          .genre {
+            font-size: 12px;
+          }
         `}
       </style>
       <div className="album-info">
@@ -58,7 +67,8 @@ function NewAlbum(props) {
       <span className="album-artist">{props.artist}</span>
       </div>
       <div className="new-album-right">
-        <span><em>{props.genre}</em></span>
+        <span className="genre"><em>{props.genre}</em></span>
+        <span className="album-date">{props.date}</span>
         <div className="album-img-wrapper">
           <img height="100%" src={props.imageUrl}/>
         </div>
