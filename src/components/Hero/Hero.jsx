@@ -60,6 +60,60 @@ function Hero() {
             rating: "8"
           }
         ]
+      },
+      {
+        title: "You Ain't Coming Back",
+        artist: "Zeal & Ardor",
+        releaseDate: "Sep 07, 2018",
+        recordLabel: "MVKA Music",
+        formats: ["CD", "LP"],
+        totalSongs: "16",
+        length: "47 min",
+        rating: "7",
+        genre: "Black Metal",
+        starRating: "4.0",
+        imageUrl: "https://f4.bcbits.com/img/a4038930226_16.jpg",
+        trackList: [
+          {
+            songTitle: "Intro",
+            trackNumber: "1",
+            length: "2:14",
+            rating: "6"
+          },
+          {
+            songTitle: "Gravedigger's Chant",
+            trackNumber: "2",
+            length: "3:11",
+            rating: "8"
+          }
+        ]
+      },
+      {
+        title: "Memory Lame",
+        artist: "Giraffes? Giraffes!",
+        releaseDate: "Apr 27, 2018",
+        recordLabel: "Topshelf Records",
+        formats: ["CD", "LP"],
+        totalSongs: "6",
+        length: "41 min",
+        rating: "8",
+        genre: "Math Rock",
+        starRating: "4.5",
+        imageUrl: "https://f4.bcbits.com/img/a0605327415_16.jpg",
+        trackList: [
+          {
+            songTitle: "Heretical Doses",
+            trackNumber: "1",
+            length: "8:36",
+            rating: "6"
+          },
+          {
+            songTitle: "Hug of Death",
+            trackNumber: "2",
+            length: "6:48",
+            rating: "8"
+          }
+        ]
       }
     ]
   }
@@ -75,7 +129,7 @@ function Hero() {
             padding-bottom: 42px;
           }
           .hero-feature {
-            width: 1300px;
+            width: 1350px;
             margin-left: auto;
             margin-right: auto;
             display: flex;
@@ -86,12 +140,12 @@ function Hero() {
             height: 50vh;
             padding: 42px;
           }
-        `}
-      </style>
-      <div className="hero-feature">
-      <FeaturedAlbum title={state.albumList[1].title} imageUrl={state.albumList[1].imageUrl}  artist={state.albumList[1].artist}/>
-      <NewestAlbumsList albumList={state.albumList}/>
-      </div>
+          `}
+        </style>
+        <div className="hero-feature">
+          <FeaturedAlbum title={state.albumList[1].title} imageUrl={state.albumList[1].imageUrl}  artist={state.albumList[1].artist}/>
+          <NewestAlbumsList albumList={state.albumList}/>
+        </div>
       </div>
     )
   }

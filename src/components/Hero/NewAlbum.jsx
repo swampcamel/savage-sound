@@ -15,6 +15,8 @@ function NewAlbum(props) {
             align-items: center;
             justify-content: space-between;
             transition: all .15s linear;
+            margin-left: auto;
+            margin-right: auto;
           }
 
           .album-info {
