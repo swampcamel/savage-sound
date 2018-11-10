@@ -35,7 +35,6 @@ function NewAlbum(props) {
             font-size: 17px;
           }
 
-
           span, img {
             display: block;
           }
