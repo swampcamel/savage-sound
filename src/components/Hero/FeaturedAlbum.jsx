@@ -7,6 +7,8 @@ function FeaturedAlbum(props) {
       <style jsx>
         {`
           .feature-wrap {
+            margin-top: 42px;
+            margin-bottom: 42px;
             background: url(${props.imageUrl});
             background-size: cover;
             background-position: center center;

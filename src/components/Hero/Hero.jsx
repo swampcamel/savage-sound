@@ -26,6 +26,13 @@ function Hero(props) {
             height: 40vh;
             padding: 42px;
           }
+          @media screen and (max-width: 1350px) {
+            .hero-feature {
+              flex-direction: column;
+              height: 70vh;
+              width: 98%;
+            }
+          }
           `}
         </style>
         <div className="hero-feature">
