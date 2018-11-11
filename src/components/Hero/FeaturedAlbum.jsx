@@ -35,14 +35,14 @@ function FeaturedAlbum(props) {
             margin-left: 16px;
             transition: all .8s ease;
           }
-        `}
-      </style>
-      <div className="meta">
-      <h2>{props.title}</h2>
-      <span>{props.artist}</span>
+          `}
+        </style>
+        <div className="meta">
+          <h2>{props.title}</h2>
+          <span>{props.artist}</span>
+        </div>
       </div>
-    </div>
-  )
-}
+    )
+  }
 
-export default FeaturedAlbum;
+  export default FeaturedAlbum;

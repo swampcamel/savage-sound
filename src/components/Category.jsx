@@ -41,31 +41,31 @@ function Category(props) {
             margin: 0 22px;
             cursor: url(${altPointer}), auto;
           }
-        `}
-      </style>
-      <div className="category-title">
-        {props.name}
+          `}
+        </style>
+        <div className="category-title">
+          {props.name}
+        </div>
+        <div className="album-feature-wrapper">
+          {props.albumList.map((album, index) => {
+            if (album.genre == props.name) {
+              return(
+                <Link key={index} to="/albums/:title">
+                  <div className="album-feature" >
+                    <div className="album-img-wrapper">
+                      <img height="100%" src={album.imageUrl}/>
+                    </div>
+                    <p>{album.title}</p>
+                    <p>{album.artist}</p>
+                    <p>{album.releaseDate}</p>
+                  </div>
+                </Link>
+              )
+            }
+          })}
+        </div>
       </div>
-      <div className="album-feature-wrapper">
-        {props.albumList.map((album, index) => {
-          if (album.genre == props.name) {
-            return(
-              <Link key={index} to="/albums/:title">
-              <div className="album-feature" >
-              <div className="album-img-wrapper">
-                <img height="100%" src={album.imageUrl}/>
-              </div>
-              <p>{album.title}</p>
-              <p>{album.artist}</p>
-              <p>{album.releaseDate}</p>
-              </div>
-              </Link>
-            )
-          }
-        })}
-      </div>
-    </div>
-  )
-}
+    )
+  }
 
-export default Category;
+  export default Category;

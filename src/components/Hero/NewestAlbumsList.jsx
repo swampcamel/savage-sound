@@ -17,7 +17,7 @@ function NewestAlbumsList(props) {
           .list-wrapper::-webkit-scrollbar {
             display: none;
           }
-        `}
+          `}
 
         </style>
         {props.albumList.reverse().map((album, index) =>

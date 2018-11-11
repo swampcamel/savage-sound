@@ -62,23 +62,23 @@ function NewAlbum(props) {
           .genre {
             font-size: 12px;
           }
-        `}
-      </style>
-      <div className="album-info">
-        <Link to="/albums/:title">
-          <span className="album-title"><strong>{props.title}</strong></span>
-          <span className="album-artist">{props.artist}</span>
-        </Link>
-      </div>
-      <div className="new-album-right">
-        <span className="genre"><em>{props.genre}</em></span>
-        <span className="album-date">{props.date}</span>
-        <div className="album-img-wrapper">
-          <img height="100%" src={props.imageUrl}/>
+          `}
+        </style>
+        <div className="album-info">
+          <Link to="/albums/:title">
+            <span className="album-title"><strong>{props.title}</strong></span>
+            <span className="album-artist">{props.artist}</span>
+          </Link>
+        </div>
+        <div className="new-album-right">
+          <span className="genre"><em>{props.genre}</em></span>
+          <span className="album-date">{props.date}</span>
+          <div className="album-img-wrapper">
+            <img height="100%" src={props.imageUrl}/>
+          </div>
         </div>
       </div>
-    </div>
-  )
-}
+    )
+  }
 
-export default NewAlbum;
+  export default NewAlbum;

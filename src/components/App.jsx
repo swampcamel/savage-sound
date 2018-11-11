@@ -8,12 +8,12 @@ import TopNav from "./TopNav/TopNav";
 function App(){
   return (
     <div>
-    <TopNav/>
-    <Switch>
-    <Route exact path='/' component={Home}/>
-    <Route name="albums" path='/albums/:title' component={AlbumReview}/>
-    <Route path='/page2' component={Page2}/>
-    </Switch>
+      <TopNav/>
+      <Switch>
+        <Route exact path='/' component={Home}/>
+        <Route name="albums" path='/albums/:title' component={AlbumReview}/>
+        <Route path='/page2' component={Page2}/>
+      </Switch>
     </div>
   );
 }

@@ -18,18 +18,18 @@ function AlbumReview(props) {
             width: 68%;
             border: blue solid 1px;
           }
-        `}
-      </style>
-      <div className="album-sidebar">
-        <h2>Image</h2>
+          `}
+        </style>
+        <div className="album-sidebar">
+          <h2>Image</h2>
+        </div>
+        <div className="album-page-wrapper">
+          <h4>Album Artist</h4>
+          <h2>Album Title</h2>
+          <h6>Genre / Release Date</h6>
+        </div>
       </div>
-      <div className="album-page-wrapper">
-        <h4>Album Artist</h4>
-        <h2>Album Title</h2>
-        <h6>Genre / Release Date</h6>
-      </div>
-    </div>
-  )
-};
+    )
+  };
 
-export default AlbumReview;
+  export default AlbumReview;
