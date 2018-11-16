@@ -7,10 +7,10 @@ function Home(props) {
 
   return (
     <div>
-      <Hero albumList={props.albumList}/>
-      <Category name="Psych Rock" albumList={props.albumList}/>
-      <Category name="Math Rock" albumList={props.albumList}/>
-      <Category name="Niche" albumList={props.albumList}/>
+      <Hero onChangeSelectedAlbum={props.onChangeSelectedAlbum} albumList={props.albumList}/>
+      <Category onChangeSelectedAlbum={props.onChangeSelectedAlbum} name="Psych Rock" albumList={props.albumList}/>
+      <Category onChangeSelectedAlbum={props.onChangeSelectedAlbum} name="Math Rock" albumList={props.albumList}/>
+      <Category onChangeSelectedAlbum={props.onChangeSelectedAlbum} name="Niche" albumList={props.albumList}/>
     </div>
   )
 };

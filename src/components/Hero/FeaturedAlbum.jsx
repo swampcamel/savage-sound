@@ -37,7 +37,7 @@ function FeaturedAlbum(props) {
           }
           `}
         </style>
-        <div className="meta">
+        <div onClick={() => {props.onChangeSelectedAlbum(props.id)}} className="meta">
           <h2>{props.title}</h2>
           <span>{props.artist}</span>
         </div>

@@ -36,8 +36,12 @@ function Hero(props) {
           `}
         </style>
         <div className="hero-feature">
-          <FeaturedAlbum title={props.albumList[props.albumList.length-1].title} imageUrl={props.albumList[props.albumList.length-1].imageUrl}  artist={props.albumList[props.albumList.length-1].artist}/>
-          <NewestAlbumsList albumList={props.albumList}/>
+          <FeaturedAlbum onChangeSelectedAlbum={props.onChangeSelectedAlbum}
+             title={props.albumList[props.albumList.length-1].title}
+             imageUrl={props.albumList[props.albumList.length-1].imageUrl}
+             artist={props.albumList[props.albumList.length-1].artist}
+             id={props.albumList[props.albumList.length-1].id}/>
+          <NewestAlbumsList onChangeSelectedAlbum={props.onChangeSelectedAlbum} albumList={props.albumList}/>
         </div>
       </div>
     )

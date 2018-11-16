@@ -9,6 +9,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      selectedAlbum: null,
       masterAlbumList: [
         {
           id: 0,
@@ -280,6 +281,12 @@ class App extends React.Component {
         }
       ]
     }
+    this.changeSelectedAlbum = this.changeSelectedAlbum.bind(this);
+  }
+
+  changeSelectedAlbum(albumId) {
+    this.setState({selectedAlbum: albumId});
+    console.log(this.state.selectedAlbum)
   }
 
   render() {
@@ -287,8 +294,8 @@ class App extends React.Component {
     <div>
       <TopNav/>
       <Switch>
-        <Route exact path='/' render={() => <Home albumList={this.state.masterAlbumList}/>}/>
-        <Route name="albums" path='/albums/:id' render={() => <Page2 albumList={this.state.masterAlbumList}/>}/>
+        <Route exact path='/' render={() => <Home onChangeSelectedAlbum={this.changeSelectedAlbum} albumList={this.state.masterAlbumList}/>}/>
+        <Route name="albums" path='/albums/:id' render={() => <Page2 selectedAlbum={this.state.selectedAlbum} albumList={this.state.masterAlbumList}/>}/>
         <Route path='/Page2' component={Page2}/>
       </Switch>
     </div>
