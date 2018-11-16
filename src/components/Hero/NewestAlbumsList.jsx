@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import NewAlbum from './NewAlbum';
 
 function NewestAlbumsList(props) {
-  console.log(props.albumList);
-  console.log(props.albumList.reverse())
   return (
     <div className="list-wrapper">
       <style jsx>
@@ -22,7 +20,7 @@ function NewestAlbumsList(props) {
           `}
 
         </style>
-        {props.albumList.reverse().map((album, index) =>
+        {props.albumList.map((album, index) =>
           <NewAlbum key={index} title={album.title} artist={album.artist} date={album.releaseDate} imageUrl={album.imageUrl} genre={album.genre} onChangeSelectedAlbum={props.onChangeSelectedAlbum} id={album.id}/>
         )}
       </div>

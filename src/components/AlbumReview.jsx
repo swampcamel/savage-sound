@@ -14,7 +14,6 @@ function AlbumReview(props) {
   }
 
   const album = matchSelectedAlbum(albumId, albumList);
-  console.log(album)
   return (
     <div className="ar-wrapper">
       <style jsx>

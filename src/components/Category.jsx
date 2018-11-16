@@ -50,17 +50,19 @@ function Category(props) {
           {props.albumList.map((album, index) => {
             if (album.genre == props.name) {
               return(
-                <div key={index}>
-                <Link to={`/albums/${album.artist}-${album.title}`}>
-                  <div className="album-feature" >
-                    <div className="album-img-wrapper">
-                      <img height="100%" src={album.imageUrl}/>
+                <div onClick={() => {props.onChangeSelectedAlbum(album.id)}} key={index}>
+                  <Link to={`/albums/${album.artist}-${album.title}`}>
+                    <div className="album-feature" >
+                      <div className="album-img-wrapper">
+                        <img height="100%" src={album.imageUrl}/>
+                      </div>
+                      <div >
+                        <p>{album.title}</p>
+                        <p>{album.artist}</p>
+                        <p>{album.releaseDate}</p>
+                      </div>
                     </div>
-                    <p>{album.title}</p>
-                    <p>{album.artist}</p>
-                    <p>{album.releaseDate}</p>
-                  </div>
-                </Link>
+                  </Link>
                 </div>
               )
             }
