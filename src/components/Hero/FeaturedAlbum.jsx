@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom'
 
 function FeaturedAlbum(props) {
   return (
@@ -37,10 +38,12 @@ function FeaturedAlbum(props) {
           }
           `}
         </style>
+        <Link to={`/albums/${props.artist}-${props.title}`}>
         <div onClick={() => {props.onChangeSelectedAlbum(props.id)}} className="meta">
           <h2>{props.title}</h2>
           <span>{props.artist}</span>
         </div>
+        </Link>
       </div>
     )
   }
