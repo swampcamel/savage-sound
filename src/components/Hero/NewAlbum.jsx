@@ -4,6 +4,7 @@ import altPointer from '../../assets/img/alt-pointer.png';
 import {Link} from 'react-router-dom';
 
 function NewAlbum(props) {
+  console.log(props.id)
   return (
     <div className="new-album">
       <style jsx>

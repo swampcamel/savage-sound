@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import NewAlbum from './NewAlbum';
 
 function NewestAlbumsList(props) {
+  console.log(props.albumList);
+  console.log(props.albumList.reverse())
   return (
     <div className="list-wrapper">
       <style jsx>

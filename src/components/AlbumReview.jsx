@@ -3,7 +3,18 @@ import PropTypes from "prop-types";
 
 function AlbumReview(props) {
   const albumId = props.selectedAlbum;
-  console.log(albumId);
+  const albumList = props.albumList;
+
+  function matchSelectedAlbum(albumId, albumArray) {
+    for (let i = 0; i < albumList.length; i++) {
+      if (albumArray[i].id === albumId ) {
+        return albumArray[i];
+      }
+    }
+  }
+
+  const album = matchSelectedAlbum(albumId, albumList);
+  console.log(album)
   return (
     <div className="ar-wrapper">
       <style jsx>
@@ -27,13 +38,13 @@ function AlbumReview(props) {
         </style>
         <div className="album-sidebar">
           <div className="album-cover-wrapper">
-            <img height="100%" src={props.albumList[albumId].imageUrl}/>
+            <img height="200px" src={album.imageUrl}/>
           </div>
         </div>
         <div className="album-page-wrapper">
-          <h4>{props.albumList[albumId].artist}</h4>
-          <h2>{props.albumList[albumId].title}</h2>
-          <h6>{props.albumList[albumId].genre} /{props.albumList[albumId].releaseDate}</h6>
+          <h4>{album.artist}</h4>
+          <h2>{album.title}</h2>
+          <h6>{album.genre} /{album.releaseDate}</h6>
         </div>
       </div>
     )
