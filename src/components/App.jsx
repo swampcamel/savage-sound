@@ -263,7 +263,7 @@ class App extends React.Component {
           rating: "8",
           genre: "Psych Rock",
           starRating: "4.5",
-          imageUrl: "https://cdn.shopify.com/s/files/1/0336/8929/products/Ty_Segall_Fudge_Sandwich_-_Cover_for_web_1024x1024.jpg?v=1536102160",
+          imageUrl: "https://cdn.shopify.com/s/files/1/0336/8929/products/Ty_Segall_Fudge_Sandwich_-_Cover_for_web_1024x1024.jpg",
           trackList: [
             {
               songTitle: "Low Rider",
@@ -286,7 +286,6 @@ class App extends React.Component {
 
   changeSelectedAlbum(albumId) {
     this.setState({selectedAlbum: albumId});
-    console.log(this.state.selectedAlbum)
   }
 
   render() {
@@ -296,7 +295,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' render={() => <Home onChangeSelectedAlbum={this.changeSelectedAlbum} albumList={this.state.masterAlbumList}/>}/>
           <Route name="albums" path='/albums/:id' render={() =>
-              <Page2 selectedAlbum={this.state.selectedAlbum} albumList={this.state.masterAlbumList}/>}/>
+              <AlbumReview selectedAlbum={this.state.selectedAlbum} albumList={this.state.masterAlbumList}/>}/>
               <Route path='/Page2' component={Page2}/>
             </Switch>
           </div>

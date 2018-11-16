@@ -64,12 +64,12 @@ function NewAlbum(props) {
           }
           `}
         </style>
-        <div className="album-info">
-          <Link to={`/albums/${props.artist}-${props.title}`}>
+        <Link to={`/albums/${props.artist}-${props.title}`}>
+        <div onClick={() => {props.onChangeSelectedAlbum(props.id)}} className="album-info">
             <span className="album-title"><strong>{props.title}</strong></span>
             <span className="album-artist">{props.artist}</span>
-          </Link>
         </div>
+      </Link>
         <div className="new-album-right">
           <span className="genre"><em>{props.genre}</em></span>
           <span className="album-date">{props.date}</span>
