@@ -4,12 +4,15 @@ import {Link} from 'react-router-dom'
 
 function FeaturedAlbum(props) {
   return (
-    <div className="feature-wrap">
+    <div className="max-height">
       <style jsx>
         {`
-          .feature-wrap {
+          .max-height {
+            height: 100%;
             margin-top: 42px;
             margin-bottom: 42px;
+          }
+          .feature-wrap {
             background: url(${props.imageUrl});
             background-size: cover;
             background-position: center center;
@@ -39,10 +42,12 @@ function FeaturedAlbum(props) {
           `}
         </style>
         <Link to={`/albums/${props.artist}-${props.title}`}>
-        <div onClick={() => {props.onChangeSelectedAlbum(props.id)}} className="meta">
-          <h2>{props.title}</h2>
-          <span>{props.artist}</span>
-        </div>
+          <div className="feature-wrap">
+            <div onClick={() => {props.onChangeSelectedAlbum(props.id)}} className="meta">
+              <h2>{props.title}</h2>
+              <span>{props.artist}</span>
+            </div>
+          </div>
         </Link>
       </div>
     )

@@ -290,16 +290,17 @@ class App extends React.Component {
   }
 
   render() {
-  return (
-    <div>
-      <TopNav/>
-      <Switch>
-        <Route exact path='/' render={() => <Home onChangeSelectedAlbum={this.changeSelectedAlbum} albumList={this.state.masterAlbumList}/>}/>
-        <Route name="albums" path='/albums/:id' render={() => <Page2 selectedAlbum={this.state.selectedAlbum} albumList={this.state.masterAlbumList}/>}/>
-        <Route path='/Page2' component={Page2}/>
-      </Switch>
-    </div>
-  );}
-}
+    return (
+      <div>
+        <TopNav/>
+        <Switch>
+          <Route exact path='/' render={() => <Home onChangeSelectedAlbum={this.changeSelectedAlbum} albumList={this.state.masterAlbumList}/>}/>
+          <Route name="albums" path='/albums/:id' render={() =>
+              <Page2 selectedAlbum={this.state.selectedAlbum} albumList={this.state.masterAlbumList}/>}/>
+              <Route path='/Page2' component={Page2}/>
+            </Switch>
+          </div>
+        );}
+      }
 
-export default App;
+      export default App;

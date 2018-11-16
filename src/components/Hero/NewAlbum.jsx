@@ -65,7 +65,7 @@ function NewAlbum(props) {
           `}
         </style>
         <div className="album-info">
-          <Link to="/albums/:title">
+          <Link to={`/albums/${props.artist}-${props.title}`}>
             <span className="album-title"><strong>{props.title}</strong></span>
             <span className="album-artist">{props.artist}</span>
           </Link>

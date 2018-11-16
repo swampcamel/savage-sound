@@ -50,7 +50,7 @@ function Category(props) {
           {props.albumList.map((album, index) => {
             if (album.genre == props.name) {
               return(
-                <Link key={index} to="/albums/:title">
+                <Link to={`/albums/${album.artist}-${album.title}`}>
                   <div className="album-feature" >
                     <div className="album-img-wrapper">
                       <img height="100%" src={album.imageUrl}/>
