@@ -1,4 +1,4 @@
-#Savage Sound - An Album Review Site
+# Savage Sound - An Album Review Site
 
 This project was built with [React](https://reactjs.org/) v15.5.4.
 
