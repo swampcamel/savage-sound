@@ -235,6 +235,7 @@ class App extends React.Component {
           rating: "7",
           genre: "Niche",
           starRating: "4.0",
+          playerIframe: "https://bandcamp.com/EmbeddedPlayer/album=4069278465/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/",
           imageUrl: "https://f4.bcbits.com/img/a0781820650_10.jpg",
           trackList: [
             {
@@ -294,8 +295,8 @@ class App extends React.Component {
         <TopNav/>
         <Switch>
           <Route exact path='/' render={() => <Home onChangeSelectedAlbum={this.changeSelectedAlbum} albumList={this.state.masterAlbumList}/>}/>
-          <Route name="albums" path='/albums/:id' render={() =>
-              <AlbumReview selectedAlbum={this.state.selectedAlbum} albumList={this.state.masterAlbumList}/>}/>
+          <Route name="albums" path='/albums/:id' render={(props) =>
+              <AlbumReview onChangeSelectedAlbum={this.changeSelectedAlbum} match={props.match} selectedAlbum={this.state.selectedAlbum} albumList={this.state.masterAlbumList}/>}/>
               <Route path='/Page2' component={Page2}/>
             </Switch>
           </div>

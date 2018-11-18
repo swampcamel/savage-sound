@@ -10,7 +10,6 @@ function Hero(props) {
         {`
           .hero {
             width: 100%;
-            border-bottom: solid red 1px;
             padding-top: 42px;
             padding-bottom: 42px;
           }
