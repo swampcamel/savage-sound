@@ -38,4 +38,19 @@ An admin for this would be the next stretch goal, a backend dash for submitting 
 
 Clone or download repository.
 
-```npm i``` to install packages and dependencies.
+``` npm i ``` to install packages and dependencies.
+
+``` webpack ``` to build
+
+``` webpack-dev-server --open ``` to open in browser on localhost:8000
+
+## Known Bugs
+
+AlbumReview component crashes on refresh as the initial state of selectedAlbum is set to null.
+
+## Development Goals
+
+ - Add more front page components for featuring album content
+ - Add links to stores for Album Review Page
+ - Add social API integration for sharing the page (need to fix loading selectedAlbum by URL)
+ - Add user ratings interaction with state
