@@ -36,7 +36,7 @@ An admin for this would be the next stretch goal, a backend dash for submitting 
 
 ![Album Page Mockup](./album-mockup.jpg)
 
-![Development Home Page](./screen1.jpg)
+![Development Home Page](./screen2.jpg)
 
 ## Setup Instructions
 
