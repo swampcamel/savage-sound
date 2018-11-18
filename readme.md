@@ -28,13 +28,15 @@ All components provide album information from a data source and are generated fr
 
 An admin for this would be the next stretch goal, a backend dash for submitting a new album and a review for it, and pushing that into the state data.
 
-### Sketches
+### Sketches & Screens
 
 ![Component Route Mockup](./diagram.jpg)
 
 ![Home Page Mockup](./home-mockup.jpg)
 
 ![Album Page Mockup](./album-mockup.jpg)
+
+![Development Home Page](./screen1.jpg)
 
 ## Setup Instructions
 
@@ -56,3 +58,4 @@ AlbumReview component crashes on refresh as the initial state of selectedAlbum i
  - Add links to stores for Album Review Page
  - Add social API integration for sharing the page (need to fix loading selectedAlbum by URL)
  - Add user ratings interaction with state
+ - Make it look gud.
