@@ -74,7 +74,6 @@ function AlbumReview(props) {
               <div>
                 <span>MetaCritic Score: </span><span>TBD</span>
               </div>
-
             </div>
           </div>
         </div>

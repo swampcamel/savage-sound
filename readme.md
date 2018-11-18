@@ -30,6 +30,8 @@ An admin for this would be the next stretch goal, a backend dash for submitting 
 
 ### Sketches
 
+![Component Route Mockup](./diagram.jpg)
+
 ![Home Page Mockup](./home-mockup.jpg)
 
 ![Album Page Mockup](./album-mockup.jpg)
