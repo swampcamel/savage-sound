@@ -313,7 +313,7 @@ class App extends React.Component {
         console.log(albumList[i].starRating)
       }
     }
-    this.state.masterAlbumList = albumList;
+    this.setState({masterAlbumList: albumList});
   }
 
   render() {
