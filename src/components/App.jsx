@@ -22,6 +22,7 @@ class App extends React.Component {
           length: "41 min",
           rating: "8",
           genre: "Math Rock",
+          userRatings: [3, 2, 4, 5, 5],
           starRating: "4.5",
           imageUrl: "https://f4.bcbits.com/img/a0605327415_16.jpg",
           trackList: [
@@ -50,6 +51,7 @@ class App extends React.Component {
           length: "39 min",
           rating: "7",
           genre: "Psych Rock",
+          userRatings: [3, 2, 4, 5, 5],
           starRating: "4",
           imageUrl: "https://images-na.ssl-images-amazon.com/images/I/41MizCr3m2L._SY355_.jpg",
           trackList: [
@@ -78,6 +80,7 @@ class App extends React.Component {
           length: "13 min",
           rating: "8",
           genre: "Math Rock",
+          userRatings: [3, 2, 4, 5, 5],
           starRating: "4.5",
           imageUrl: "https://f4.bcbits.com/img/a2502688364_10.jpg",
           trackList: [
@@ -100,6 +103,7 @@ class App extends React.Component {
           length: "18 min",
           rating: "8",
           genre: "Math Rock",
+          userRatings: [3, 2, 4, 5, 5],
           starRating: "4.5",
           imageUrl: "https://f4.bcbits.com/img/a1829945324_10.jpg",
           trackList: [
@@ -122,6 +126,7 @@ class App extends React.Component {
           length: "54 min",
           rating: "8",
           genre: "Psych Rock",
+          userRatings: [3, 2, 4, 5, 5],
           starRating: "4.5",
           imageUrl: "https://f4.bcbits.com/img/a4170847855_10.jpg",
           trackList: [
@@ -150,6 +155,7 @@ class App extends React.Component {
           length: "21 min",
           rating: "9",
           genre: "Math Rock",
+          userRatings: [3, 2, 4, 5, 5],
           starRating: "5",
           imageUrl: "https://f4.bcbits.com/img/a3059624199_10.jpg",
           trackList: [
@@ -178,6 +184,7 @@ class App extends React.Component {
           length: "46 min",
           rating: "8",
           genre: "Psych Rock",
+          userRatings: [3, 2, 4, 5, 5],
           starRating: "4.5",
           imageUrl: "http://theobelisk.net/obelisk/wp-content/uploads/2018/08/uncle-acid-and-the-deadbeats-wasteland.jpg",
           trackList: [
@@ -206,6 +213,7 @@ class App extends React.Component {
           length: "47 min",
           rating: "7",
           genre: "Niche",
+          userRatings: [3, 2, 4, 5, 5],
           starRating: "4.0",
           imageUrl: "https://f4.bcbits.com/img/a4038930226_16.jpg",
           trackList: [
@@ -234,6 +242,7 @@ class App extends React.Component {
           length: "48 min",
           rating: "7",
           genre: "Niche",
+          userRatings: [3, 2, 4, 5, 5],
           starRating: "4.0",
           playerIframe: "https://bandcamp.com/EmbeddedPlayer/album=4069278465/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/",
           imageUrl: "https://f4.bcbits.com/img/a0781820650_10.jpg",
@@ -263,6 +272,7 @@ class App extends React.Component {
           length: "38 min",
           rating: "8",
           genre: "Psych Rock",
+          userRatings: [3, 2, 4, 5, 5],
           starRating: "4.5",
           imageUrl: "https://cdn.shopify.com/s/files/1/0336/8929/products/Ty_Segall_Fudge_Sandwich_-_Cover_for_web_1024x1024.jpg",
           spotifyLink: "https://open.spotify.com/album/3DSA6rDV2HqxmPnjngocEw",
@@ -284,10 +294,26 @@ class App extends React.Component {
       ]
     }
     this.changeSelectedAlbum = this.changeSelectedAlbum.bind(this);
+    this.modifyUserRating = this.modifyUserRating.bind(this);
   }
 
   changeSelectedAlbum(albumId) {
     this.setState({selectedAlbum: albumId});
+  }
+
+  modifyUserRating(albumId, newRating) {
+    let albumList = this.state.masterAlbumList.slice();
+    for (let i =0; i < albumList.length; i++) {
+      if (albumList[i].id === albumId ) {
+        let newTotal = 0;
+        albumList[i].userRatings.push(newRating);
+        albumList[i].userRatings.forEach(rating => newTotal += rating);
+        newTotal = Math.round(newTotal / albumList[i].userRatings.length);
+        albumList[i].starRating = newTotal;
+        console.log(albumList[i].starRating)
+      }
+    }
+    this.state.masterAlbumList = albumList;
   }
 
   render() {
@@ -297,7 +323,9 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' render={() => <Home onChangeSelectedAlbum={this.changeSelectedAlbum} albumList={this.state.masterAlbumList}/>}/>
           <Route name="albums" path='/albums/:id' render={(props) =>
-              <AlbumReview onChangeSelectedAlbum={this.changeSelectedAlbum} match={props.match} selectedAlbum={this.state.selectedAlbum} albumList={this.state.masterAlbumList}/>}/>
+              <AlbumReview onChangeSelectedAlbum={this.changeSelectedAlbum}
+              onModifyUserRating={this.modifyUserRating}
+              match={props.match} selectedAlbum={this.state.selectedAlbum} albumList={this.state.masterAlbumList}/>}/>
               <Route path='/Page2' component={Page2}/>
             </Switch>
           </div>

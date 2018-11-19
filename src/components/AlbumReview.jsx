@@ -71,8 +71,13 @@ function AlbumReview(props) {
               <div>
                 <span>User Score: </span><span>{album.starRating} / 5</span>
               </div>
-              <div>
-                <span>MetaCritic Score: </span><span>TBD</span>
+              <div className="user-rating">
+                <p>Rate This Album!</p>
+                <span onClick={() => {props.onModifyUserRating(album.id, 1)}} className="rating-option">1</span>
+                <span onClick={() => {props.onModifyUserRating(album.id, 2)}} className="rating-option">2</span>
+                <span onClick={() => {props.onModifyUserRating(album.id, 3)}} className="rating-option">3</span>
+                <span onClick={() => {props.onModifyUserRating(album.id, 4)}} className="rating-option">4</span>
+                <span onClick={() => {props.onModifyUserRating(album.id, 5)}} className="rating-option">5</span>
               </div>
             </div>
           </div>
