@@ -265,6 +265,7 @@ class App extends React.Component {
           genre: "Psych Rock",
           starRating: "4.5",
           imageUrl: "https://cdn.shopify.com/s/files/1/0336/8929/products/Ty_Segall_Fudge_Sandwich_-_Cover_for_web_1024x1024.jpg",
+          spotifyLink: "https://open.spotify.com/album/3DSA6rDV2HqxmPnjngocEw",
           trackList: [
             {
               songTitle: "Low Rider",

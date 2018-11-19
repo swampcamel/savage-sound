@@ -1,4 +1,5 @@
 import React from 'react';
+import SpotifyLogo from '../assets/img/spotify-brands.svg';
 
 function AlbumSidebar (props) {
   return(
@@ -34,6 +35,14 @@ function AlbumSidebar (props) {
         <div>
           <iframe style={{border: "0", width: "100%", height: "42px"}} src={props.album.playerIframe} seamless></iframe>
         </div>
+        <div>
+          <h5>Listen on:</h5>
+          <SpotifyLogo/>
+        </div>
+        <div>
+
+        </div>
+
       </div>
     </div>
   )
