@@ -54,6 +54,23 @@ function AlbumReview(props) {
           .ratings div {
             line-height: 32px;
           }
+          .user-rating {
+            display: flex;
+            justify-content: center;
+          }
+          .rating-option {
+            padding: 2px 4px;
+            margin-right: 4px;
+            border: 2px solid grey;
+            display: block;
+            text-align: center;
+            width: 16px;
+          }
+
+          .rating-option:hover {
+            background-color: pink;
+            cursor: pointer;
+          }
           `}
         </style>
         <AlbumSidebar album={album}/>
@@ -71,8 +88,8 @@ function AlbumReview(props) {
               <div>
                 <span>User Score: </span><span>{album.starRating} / 5</span>
               </div>
+              <p>Rate This Album!</p>
               <div className="user-rating">
-                <p>Rate This Album!</p>
                 <span onClick={() => {props.onModifyUserRating(album.id, 1)}} className="rating-option">1</span>
                 <span onClick={() => {props.onModifyUserRating(album.id, 2)}} className="rating-option">2</span>
                 <span onClick={() => {props.onModifyUserRating(album.id, 3)}} className="rating-option">3</span>
